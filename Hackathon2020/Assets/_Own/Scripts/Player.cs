@@ -17,11 +17,7 @@ public class Player : MonoBehaviour
     private Vector3 m_touchStartPos = Vector3.zero;
     private Vector3 m_touchEndPos = Vector3.zero;
     private Vector3 direction = Vector3.one;
-
-    private void Start()
-    {
-        SpawnBall();
-    }
+    
     
     private void Update()
     {
@@ -54,7 +50,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void SpawnBall()
+    public void SpawnBall()
     {
         GameObject ball = ballSpawner.SpawnBall();
         m_currentBall = ball.GetComponent<BallScript>();
