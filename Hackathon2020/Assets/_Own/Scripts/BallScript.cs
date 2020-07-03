@@ -21,6 +21,7 @@ public class BallScript : MonoBehaviour
         if (other.transform.CompareTag("ScoreCollider"))
         {
             scoreEvent.Raise();
+            other.GetComponentInParent<CupDestructionComponent>().RemoveSelf();
             DestroyThis();
         }
     }
