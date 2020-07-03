@@ -10,7 +10,6 @@ public class CupDestructionComponent : MonoBehaviour
     
     public void RemoveSelf()
     {
-        Sequence removeSequence = DOTween.Sequence();
         particleObject.SetActive(true);
         Tween shakeTween = transform.DOShakePosition(0.5f, 0.4f, 10,10);
         Tween scaleTween = transform.DOScale(new Vector3(0, 0, 0),0.5f);
